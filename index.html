@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>mini youtube</title>
+		<link rel="stylesheet" href="https://use.typekit.net/fdg2lzh.css">
+	</head>
+	<body>
+		<p id="howto">Hello! To use mini YouTube, please go to any YouTube video, right-click the video, then tap "copy embed code". Paste it somewhere, then find the src="<i>something</i>" bit of it, and paste the url inside it in the box below. Thanks! <a href="#" onclick="dismissHowto()">Dismiss this message</a></p>
+		<iframe id="video"></iframe>
+		<input placeholder="Enter url" oninput="rendervideo()" id="videourl">
+		<script>
+			function rendervideo() {
+				document.getElementById("video").src = document.getElementById("videourl").value
+			}
+			function dismissHowto() {
+				document.getElementById("howto").hidden = true
+			}
+		</script>
+		<style>
+			body {
+				background-color: black;
+				color: white;
+				align-items: center;
+				text-align: center;
+				font-family: roboto;
+			}
+		</style>
+	</body>
+</html>
