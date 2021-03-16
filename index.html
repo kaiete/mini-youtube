@@ -8,6 +8,7 @@
 	<body>
 		<p id="howto">Hello! To use mini YouTube, please go to any YouTube video, right-click the video, then tap "copy embed code". Paste it somewhere, then find the src="<i>something</i>" bit of it, and paste the url inside it in the box below. Thanks! <a href="#" onclick="dismissHowto()">Dismiss this message</a></p>
 		<iframe id="video"></iframe>
+    <br>
 		<input placeholder="Enter url" oninput="rendervideo()" id="videourl">
 		<script>
 			function rendervideo() {
@@ -25,6 +26,10 @@
 				text-align: center;
 				font-family: roboto;
 			}
+      #video {
+        width: 100%;
+        height: 40%;
+      }
 		</style>
 	</body>
 </html>
